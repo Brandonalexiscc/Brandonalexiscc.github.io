@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculadora interpolación lineal</title>
+<meta charset="utf-8">
+
+<link type="text/css" href="./interponalcion lineal.css" rel="stylesheet">
+</head>
+<body>
+    <span></span>
+    <form id="miFormulario" name="">
+        <td colspan="5"><span id="opciones"></span></td>
+        <button onclick="limpiar();">Limpiar valores</button>
+
+        <br>
+        <br>
+        <label> Xi=</label>
+        <input type="number" name="" id="valor1" autofocus placeholder="Escribe un número">
+        <label> Xi1=</label>
+        <input type="number" name="" id="valor2" autofocus placeholder="Escribe un número">
+
+        <br>
+        <br>
+        <label>Fxi</label>
+        <input type="NumText" name="" id="valor3" autofocus placeholder="Escribe el número">
+        <label>Fx1</label>
+        <input type="NumText" name="" id="valor4" autofocus placeholder="Escribe el número">
+
+        <br>
+        <br>
+        <label>Factor de paro</label>
+        <input type="number" name="" id="valor5" autofocus placeholder="Escribe el factor de paro">
+
+        <br>
+        <br>
+        <button type="button" id="btnRes" onclick="secante()">Metodo de secante</button>
+        <p>Resultado: <span id="el-resultado2"></span></p>
+
+        <br>
+        <br>
+        <button type="button" id="btnRes" onclick="iteracion()">iteraciones</button>
+        <p>Resultado: <span id="el-resultado"></span></p>
+
+    </form>
+    <span></span>
+    
+</body>
+<script type="text/javascript" src="metodo_de_secante.js"></script>
+</html>

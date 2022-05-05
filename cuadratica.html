@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculadora interpolación lineal</title>
+<meta charset="utf-8">
+
+<link type="text/css" href="interponalcion lineal.css" rel="stylesheet">
+</head>
+<body>
+    <span></span>
+    <form id="miFormulario" name="">
+        <td colspan="5"><span id="opciones"></span></td>
+        <button onclick="limpiar();">Limpiar valores</button>
+
+        <br>
+        <br>
+        <label>X =</label>
+        <input type="number" name="" id="valor1" autofocus placeholder="Escribe un número">
+        <label>FX =</label>
+        <input type="number" name="" id="valor2" autofocus placeholder="Escribe un número">
+
+        <br>
+        <br>
+        <label>X0 =</label>
+        <input type="number" name="" id="valor3" autofocus placeholder="Escribe un número">
+        <label>X1 =</label>
+        <input type="number" name="" id="valor4" autofocus placeholder="Escribe un número">
+        <label>X2 =</label>
+        <input type="number" name="" id="valor9" autofocus placeholder="Escribe un número">
+        
+        
+        <br>
+        <br>
+
+        <label>FX0 =</label>
+        <input type="number" name="" id="valor5" autofocus placeholder="Escribe un número">
+        <label>FX1 =</label>
+        <input type="number" name="" id="valor6" autofocus placeholder="Escribe un número">
+        <label>FX2 =</label>
+        <input type="number" name="" id="valor11" autofocus placeholder="Escribe un número">
+
+        <br>
+        <br>
+        <button type="button" id="btnRes" onclick="cuadratica()">Cuadratica</button>
+        <p>Resultado: <span id="el-resultado"></span></p>
+
+        <br>
+        <br>
+        
+        
+    </form>
+    <span></span>
+    
+</body>
+<script type="text/javascript" src="cuadratica.js"></script>
+</html>

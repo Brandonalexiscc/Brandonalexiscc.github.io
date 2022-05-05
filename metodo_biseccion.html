@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculadora interpolación lineal</title>
+<meta charset="utf-8">
+
+<link type="text/css" href="./interponalcion lineal.css" rel="stylesheet">
+</head>
+<body>
+    <span></span>
+    <form id="miFormulario" name="">
+        <td colspan="5"><span id="opciones"></span></td>
+        <button onclick="limpiar();">Limpiar valores</button>
+
+        <br>
+        <br>
+        <label> Xa=</label>
+        <input type="number" name="" id="valor1" autofocus placeholder="Escribe un número">
+        <label>Xb=</label>
+        <input type="number" name="" id="valor2" autofocus placeholder="Escribe un número">
+        <label>Función f(x)=</label>
+        <input type="NumText" name="" id="valor3" autofocus placeholder="Escribe la ecuación">
+        <br>
+        <br>
+        <label>n</label>
+        <input type="NumText" name="" id="valor3" autofocus placeholder="Escribe la ecuación">
+
+        <br>
+        <br>
+        <button type="button" id="btnRes" onclick="biseccion()">Resultado final</button>
+        <p>Resultado: <span id="el-resultado"></span></p>
+
+
+    </form>
+    <span></span>
+    
+</body>
+<script type="text/javascript" src="metodo_de_biseccion.js"></script>
+</html>
