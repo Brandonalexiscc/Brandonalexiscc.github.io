@@ -6,38 +6,44 @@ const btnRes = document.getElementById('btnRes')
 
 
 function iteraciones(){
-    let error =  100;
-    let n = 0;
-    let cf = input('ingresar funcion')
-    let f = inline(cf);
-    let x0 = input('ingresar primer valor: ')
-    let tolerancia =  parseFloat(document.getElementById('valor6').value);
-    let Xi = parseFloat(document.getElementById('valor1').value);
-    let Xi1= parseFloat(document.getElementById('valor2').value);
-    let Fxi= parseFloat(document.getElementById('valor3').value);
-    let Fx1= parseFloat(document.getElementById('valor4').value);
-    printf('    n   x0  x1  x2  error\n');
-    printf('    %1   %f  %f  x2  %f\n');
+    let Xi = parseFloat(document.getElementById('valor1').value); //X0
+    let Xi1= parseFloat(document.getElementById('valor2').value); // X1
+    let Fxi= parseFloat(document.getElementById('valor3').value); //Fx0
+    let Fx1= parseFloat(document.getElementById('valor4').value); //Fx1
+    let factorDeParo = parseFloat(document.getElementById('valor5').value); //tolerancia para oteraciones
 
-    while(error <= tolerancia ){
+        
+        let result = document.getElementById("Result"); //ITERACION IMPRESA
+      result.textContent = "";
+      let xa=0;
+      let porcentualError = 0;
+      let iteracion = 0;
+    if (Xi.length == 0 || Xi1 == '' || Fxi == '' || Fx1 == '' || factorDeParo == '') {
+      result.innerHTML ="<h1>NO HAY DATOS</h1>";
+    } else {
+      do {
+        iteracion++;
         let xr = Xi1 - Xi;
         let xr2 = Fxi * xr;
         let xr3 = Fx1 - Fxi;
         let xr4 = xr2 / xr3;
         let Xr = Xi - xr4;
-        n = n++;
-
-        let x2 = Xr;
-         x0 = x1;
-         x1 = x2;
-
-        error = Math.abs(x2);
-
+        porcentualError = Math.abs(((Xr - xa) / Xr) * 100);
+        xa = Xr;
+        
+        //EVALUAR NUEVO INTERVALO PARA IMPRIMIRLO
+        let nuevoIntervalo = 0;
+        if (Math.sign(Fxi) === -1 && Math.sign(fXR) === 1) {
+          nuevoIntervalo = `[${Xi}, ${xr}]`;
+        }
+        if (Math.sign(fXR) === -1 && Math.sign(fXU) === 1) {
+          nuevoIntervalo = `[${xr}, ${Xr}]`;
+        }
+  
+        result.innerHTML += `<h2>ITERACIÓN ${iteracion}</h2><p><b>XR = </b>${xr}<br><b>Error = </b>${porcentualError}%<br><br><b>Fxi(${xi}) = </b>${fXI}<br><b>Fxr(${xr}) = </b>${fXR}<br><b>Fxu(${xu}) = </b>${fXU}<br><br><b>Siguiente Intervalo = </b>${nuevoIntervalo}</p><br>`;
+      } while (porcentualError >= error);
     }
 
-    document.getElementById('el-resultado').innerHTML = toString();
+    document.getElementById('el-resultado').innerHTML = Xr.toString();
     console.log(res);
-}
-function orden(X0, X1){
-
 }
