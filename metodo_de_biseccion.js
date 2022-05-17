@@ -4,19 +4,7 @@ function refreshBiseccion() {
     document.getElementById("resultados").style.display = "none";
     formularioBiseccion.reset();
   }
-  /*
-  function allInputs() {
-      let result = document.getElementById("Result");
-      let fx = document.getElementById("Fx").value;
-      let xi = document.getElementById("xi3").value;
-      let xu = document.getElementById("xu3").value;
-      let error = document.getElementById("error3").value;
-    
-      if (fx == "" || xi == "" || xu == "" || error == "") {
-        result.innerHTML = `<h2>ERROR</h2><p>Ingrese todos los campos correctamente</p>`;
-      }
-    }
-  */
+  
   function formula() {
       let fx = document.getElementById("Fx").value; // FUNCTION
       let xi = parseFloat(document.getElementById("xi3").value); //X INFERIOR
