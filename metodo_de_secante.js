@@ -17,8 +17,8 @@ function iteraciones(){
         let xa=0;
         let porcentualError = 0;
         let iteracion = 0;
-      if (Xi == 0 || Xi1 == '' || Fxi == '' || Fx1 == '' || factorDeParo == '') {
-      result.innerHTML ="<h1>Syntax Error prro teibolero</h1>";
+      if (Xi.length == 0 || Xi1 == '' || Fxi == '' || Fx1 == '' || factorDeParo == '') {
+      result.innerHTML ="<h1>Syntax Error prro teibolero </h1>";
     } else {
       do {
         iteracion = iteracion + 1;
