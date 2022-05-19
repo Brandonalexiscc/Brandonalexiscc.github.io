@@ -14,23 +14,23 @@ function iteraciones(){
         
         let result = document.getElementById("Result"); //ITERACION IMPRESA
         result.textContent = "";
-        let xa=0;
+        let xa = 0;
         let porcentualError = 0;
         let iteracion = 0;
       if (Xi.length == 0 || Xi1 == '' || Fxi == '' || Fx1 == '' || factorDeParo == '') {
-      result.innerHTML ="<h1>Syntax Error prro teibolero </h1>";
+      result.innerHTML ="<h1>Syntax Error </h1>";
     } else {
       do {
-        iteracion = iteracion + 1;
-        let xr = Xi1 - Xi;
-        let xr2 = Fxi * xr;
-        let xr3 = Fx1 - Fxi;
-        let xr4 = xr2 / xr3;
-        let Xr = Xi - xr4;
+          iteracion = iteracion + 1;
+          let xr = Xi1 - Xi;
+          let xr2 = Fxi * xr;
+          let xr3 = Fx1 - Fxi;
+          let xr4 = xr2 / xr3;
+          let Xr = Xi - xr4;
 
-        //sacar error porcentual
-        porcentualError = Math.abs(((Xr - xa) / Xr) * 100);
-        xa = Xr;
+          //sacar error porcentual
+          porcentualError = Math.abs(((Xr - xa) / Xr) * 100);
+          xa = Xr;
         
 
             result.innerHTML += `<h2>ITERACIÓN ${iteracion}</h2><p><b>XR = </b> ${Xr}<br><b>Error = </b>${porcentualError}%<br><br>`;
