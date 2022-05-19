@@ -14,9 +14,10 @@ function iteraciones(){
         
         let result = document.getElementById("Result"); //ITERACION IMPRESA
         result.textContent = "";
-        let xa = 0;
+        let xa = 1;
         let porcentualError = 0;
         let iteracion = 0;
+        let i = 0;
       if (Xi.length == 0 || Xi1 == '' || Fxi == '' || Fx1 == '' || factorDeParo == '') {
       result.innerHTML ="<h1>Syntax Error </h1>";
     } else {
@@ -28,11 +29,11 @@ function iteraciones(){
           let xr4 = xr2 / xr3;
           let Xr = Xi - xr4;
 
-          //sacar error porcentual
+          i++;
+          if(i > 0){
           porcentualError = Math.abs(((Xr - xa) / Xr) * 100);
           xa = Xr;
-        
-
+          }
             result.innerHTML += `<h2>ITERACIÓN ${iteracion}</h2><p><b>XR = </b> ${Xr}<br><b>Error = </b>${porcentualError}%<br><br>`;
       } while (porcentualError >= factorDeParo);
     }
