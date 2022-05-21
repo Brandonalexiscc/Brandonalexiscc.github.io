@@ -25,13 +25,13 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 40px;
+    border-radius: 50px;
 }
 
 .card .btn{
     margin: 10px;
-    padding: 10px;
+    padding: 20px;
     background-color: #f8c291;
     height: 40px;
     border-radius: 8px;
