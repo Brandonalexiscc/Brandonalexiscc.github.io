@@ -14,8 +14,8 @@ function integralDefinida(){
     Fxi = fx(Xi);
     Fx1 = fx(Xi1);
 
-    let procedimiento1 = ((Fxi ** 3) / 3) - ((Fxi ** 2 ) / 2);
-    let procedimiento2 = ((Fx1 ** 3) / 2 ) - ((Fx1 ** 2) / 2 );
+    let procedimiento1 = (-((Fxi ** 3) / 3) - ((Fxi ** 2 ) / 2));
+    let procedimiento2 = (-((Fx1 ** 3) / 2 ) - ((Fx1 ** 2) / 2 ));
 
     let resta = procedimiento2 - procedimiento1;
 
