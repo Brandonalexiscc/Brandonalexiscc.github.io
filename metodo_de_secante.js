@@ -47,6 +47,6 @@ function iteraciones(){
     console.log(res);
 }
 
-function fx(x){
+  function fx(x){
   return (Math.pow(x, 3) - x - 1);
 }

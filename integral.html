@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculadora de integral definida</title>
+<meta charset="utf-8">
+
+<link type="text/css" href="./interponalcion lineal.css" rel="stylesheet">
+</head>
+<body>
+    <span></span>
+    <form id="miFormulario" name="">
+        <td colspan="5"><span id="opciones"></span></td>
+
+        <br>
+        <br>
+        <label> a=</label>
+        <input type="number" name="" id="valor1" autofocus placeholder="Escribe un número">
+        <label> b=</label>
+        <input type="number" name="" id="valor2" autofocus placeholder="Escribe un número">
+
+        <br>
+        <br>
+        <label>Fx</label>
+        <input type="NumText" name="" id="valor4" autofocus value="x^2" disabled>
+
+
+        <br>
+        <br>
+        <button type="button" id="btnRes" onclick="integralDefinida()"><span>Resultado</span></button>
+        <p>Resultado: <span id="el-resultado"></span></p>
+        
+        <br>
+        <div class="alertResult" id="Result"></div>
+        <button onclick="limpiar();"><span>Borrar</span></button>
+
+    </form>
+    <span></span>
+    
+</body>
+<script type="text/javascript" src="integral.js"></script>
+</html>
